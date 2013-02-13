@@ -58,7 +58,7 @@ FlashCards::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'start#right'
+   root :to => 'cards#right'
 
   # See how all your routes lay out with "rake routes"
 
