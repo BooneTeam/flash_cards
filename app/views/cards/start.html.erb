@@ -1,0 +1,23 @@
+
+<header class="hero-unit"><h1>Welcome To Flashcards For Ruby</h1><h2>Below is A Definition</br></h2> <h3>Match it with the correct button below!</h3></header>
+
+
+	
+	 <p><%= "#{@sym}" %></p>
+	 <ul class="btn-group btn-group-vertical">>
+	 <% for @random in @sym2 
+		 if @random == @answer
+			x = cards_right_path %>
+			<li class="btn btn-small btn-info"><%= link_to "#{@random}", x %></li>
+			<% else 
+				x = cards_wrong_path %>
+			
+				<li class="btn btn-small btn-info"><%= link_to "#{@random}", x %></li>
+	 <% end %>
+	  <% end %>
+	</ul></div>
+	  <form action="/right" method="POST">
+    <input type="text" name="action"> <input type="SUBMIT">
+  </form>
+
+<h2><%= @time %></h2>
