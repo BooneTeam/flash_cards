@@ -1,9 +1,7 @@
-
-<header class="hero-unit"><h1>Welcome To Flashcards For Ruby</h1><h2>Below is A Definition</br></h2> <h3>Match it with the correct button below!</h3></header>
-
-
-	
-	 <p><%= "#{@sym}" %></p>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+	 
 	 <ul class="btn-group btn-group-vertical">>
 	 <% for @random in @sym2 
 		 if @random == @answer
@@ -15,9 +13,14 @@
 				<li class="btn btn-small btn-info"><%= link_to "#{@random}", x %></li>
 	 <% end %>
 	  <% end %>
-	</ul></div>
-	  <form action="/right" method="POST">
-    <input type="text" name="action"> <input type="SUBMIT">
-  </form>
+	</ul>
+			</div>
+	
+	<div class= "span10"><p><%= "#{@sym}" %></p>
+	</div>
+		</div>
+	</div>
 
-<h2><%= @time %></h2>
+	<div class= "span6 offset4">
+	<h2><%= @time %></h2>
+	</div>

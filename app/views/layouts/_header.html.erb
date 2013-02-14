@@ -1,0 +1,26 @@
+<head>
+ <link rel="stylesheet" href="css/mynav.css" type="text/css" />
+ <script type="text/javascript" src="js/mynav.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body>
+	<header><h3><%= link_to "Flashy Programming", static_pages_home_path%><h3></header>
+<nav class="nav nav-pills">
+	<ul class="btn-group">
+		<li class="btn"><%= link_to "Home", static_pages_home_path %></li>
+  <li class="btn dropdown">
+    <a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#">
+        Languages
+        <b class="caret"></b>
+      </a>
+      <li class="btn"><%= link_to "About", static_pages_home_path %></li>
+    <ul class="dropdown-menu">
+      <!-- links -->
+      <li><a tabindex="-1" href="#">Action</a></li>
+       <li><a tabindex="-1" href="#">Action</a></li>
+    </ul>
+  </li>
+</ul>
+	</nav>
