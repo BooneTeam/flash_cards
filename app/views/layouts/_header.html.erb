@@ -1,8 +1,12 @@
+<html>
+
 <head>
  <link rel="stylesheet" href="css/mynav.css" type="text/css" />
  <script type="text/javascript" src="js/mynav.js"></script>
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
+  <title>Flashy Programming</title>
+
 <body>
 	<header class="navbar navbar-inverse"><div><div class="navbar-inner"> <h3><%= link_to "Flashy Programming", static_pages_home_path%><h3></header>
 <nav class="nav nav-pills">
@@ -16,6 +20,7 @@
         <b class="caret"></b>
       </a>
       <li class="btn"><%= link_to "About", static_pages_home_path %></li>
+      <li class="btn"><%= link_to "Sign up to get Learned to!", signup_path %></li>
     <ul class="dropdown-menu">
       <!-- links -->
       <li><a tabindex="-1" href="#">Action</a></li>
