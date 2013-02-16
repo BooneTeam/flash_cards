@@ -12,6 +12,23 @@
 <nav class="nav nav-pills">
 	<ul class="btn-group">
 		<li class="btn"><%= link_to "Home", static_pages_home_path %></li>
+    <% if signed_in? %>
+    <li class="btn dropdown">
+    <a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#">
+        Account
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li><%= link_to "Profile", current_user %></li>
+        <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+
+      </ul>
+    <% else %>
+         <li class="btn"><%= link_to "Sign in", signin_path %></li>
+    <li class="btn"><%= link_to "Sign up", signup_path %></li>
+    <% end %>
   <li class="btn dropdown">
     <a class="dropdown-toggle"
        data-toggle="dropdown"
@@ -26,12 +43,5 @@
         <li><%= link_to "PHP", cards_start_path%></li>
         <li><%= link_to "Obj-C", cards_start_path%></li>
       </ul>
-      <li class="btn"><%= link_to "Sign up to get Learned to!", signup_path %></li>
-    <ul class="dropdown-menu">
-      <!-- links -->
-      <li><a tabindex="-1" href="#">Action</a></li>
-       <li><a tabindex="-1" href="#">Action</a></li>
     </ul>
-  </li>
-</ul>
 	</nav>
