@@ -9,10 +9,8 @@
 	 <ul class="btn-group btn-group-vertical">>
 	 <% for @random in @sym2 
 		 if @random == @answer
-		 	@@start_count +1
 			x = rubykeys_path %>
 			<li class="btn btn-small btn-info flash"><%= link_to "#{@random}", x %></li>
-			<p><%= @@start_count %></p>
 			<% else 
 				x = cards_wrong_path %>
 			
