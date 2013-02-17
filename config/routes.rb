@@ -5,6 +5,7 @@ FlashCards::Application.routes.draw do
   
   # because of resources you don't need this anymore 
     #get "users/new"
+      root :to => 'static_pages#home'
 
   match '/signup', to: 'users#new'
 
@@ -12,17 +13,15 @@ FlashCards::Application.routes.draw do
 
   match '/signout', to: 'sessions#destroy', via: :delete
   
-  get "cards/start"
-
-  get "cards/right"
+  match '/rubykeys', to: "cards#start"
 
   get "cards/wrong"
 
-  get "start/right"
-
   get "start/wrong"
 
-  get "static_pages/home"
+  match '/home', to: "static_pages#home"
+
+  get "cards/ruby_functs"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -73,7 +72,7 @@ FlashCards::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'static_pages#home'
+ 
 
   # See how all your routes lay out with "rake routes"
 

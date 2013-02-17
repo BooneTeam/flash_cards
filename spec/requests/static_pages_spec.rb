@@ -5,7 +5,7 @@ describe "Static pages" do
     
     it "should have content 'Flashy Programming'" do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-     visit '/static_pages/home'
+     visit '/home'
      page.should have_content('Flashy Programming')
     end
   end
