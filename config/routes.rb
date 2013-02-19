@@ -15,13 +15,15 @@ FlashCards::Application.routes.draw do
   
   match '/rubykeys', to: "cards#start"
 
-  get "cards/wrong"
+  match '/wrong', to: "cards#wrong"
 
-  get "start/wrong"
+  match '/wrong', to:  "start#wrong"
 
   match '/home', to: "static_pages#home"
 
-  get "cards/ruby_functs"
+  match '/rubyfuncts', to: "cards#ruby_functs"
+
+  match '/rubyinfo', to: "static_pages#rubyinfo"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -3,22 +3,22 @@
 
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<div class="span2">
+			<div class="span4">
 	
 	 <ul class="btn-group btn-group-vertical">>
 	 <% for @random in @sym2 
 		 if @random == @answer
-			x = cards_ruby_functs_path %>
+			x = rubyfuncts_path %>
 			<li class="btn btn-small btn-info flash"><%= link_to "#{@random}", x %></li>
 			<% else 
-				x = cards_wrong_path %>
+				x = wrong_path %>
 			
 				<li class="btn btn-small btn-info flash"><%= link_to "#{@random}", x %></li>
 	 <% end %>
 	  <% end %>
 	</ul>
 </div>
-	<div class= "span10"><p class="hero-unit"><%= "#{@sym}" %></p>
+	<div class= "span8"><p class="hero-unit"><%= "#{@sym}" %></p>
 	</div>
 	<p>* If you get the answer right the flashcard will reload. If not you will be directed to another page</p>
 		</div>
