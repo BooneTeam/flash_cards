@@ -8,10 +8,10 @@
   <title>Flashy Programming</title>
 
 <body>
-	<header class="navbar navbar-inverse"><div><div class="navbar-inner"> <h3><%= link_to "Flashy Programming", home_path %><h3></header>
+	<header><div class="navbar-inner"><h3><%= link_to "Flashy Programming", home_path %><h3></header>
 <nav class="nav nav-pills">
 	<ul class="btn-group">
-		<li class="btn"><%= link_to "Home", home_path %></li>
+		<li class="btn"><i class="icon-home"></i><%=link_to " Home", home_path %></li>
     <% if signed_in? %>
     <li class="btn dropdown">
     <a class="dropdown-toggle"
@@ -35,7 +35,7 @@
        data-toggle="dropdown"
        href="#">
         Languages
-        <b class="caret"></b>
+        <b class="caret"></b><i class="icon-tasks"></i>
       </a>
       <ul class="dropdown-menu">
         <li><%= link_to "Ruby", rubyinfo_path %></li>

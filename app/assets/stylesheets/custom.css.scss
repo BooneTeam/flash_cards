@@ -1,8 +1,19 @@
 @import "bootstrap";
 
+#refstitle{
+	font-size:25px;
+	font-weight: bold;
+}
+#refs {
+	line-height: 100px ;
+}
+#languages {
+	font-size:25px;
+	font-weight: bold;
+}
 .hero-unit {
 	text-align:center;
-	background-color:#2ed8d8;
+	background-color:#009999;
 	//opacity:0.5;
 	
 }
@@ -23,13 +34,13 @@ a:hover{
 }
 
 body {
-	background-color: white;
+	background:image-url('cracks_1.png') repeat;
 }
 header{
 	text-align:center;
 }
 nav{
-	text-align:center;
+	text-align:right;
 }
 
 p{
@@ -38,13 +49,19 @@ p{
 	text-align:center;
 }
 .rubykeysa {
-	background-color: orange;
+	background-color: white;
+	border: black solid 0px;
+	border-radius: 15px;
 }
 .rubykeysb {
 	background-color: #190188;
 	color:gray;
+	border-radius: 15px;
 }
+.padtop {
+	margin-top:20px;
 
+}
 .span10 p{
 	margin-top:50px;
 	font-size:16px;

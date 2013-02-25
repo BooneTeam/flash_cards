@@ -4,15 +4,14 @@
   <div class="row-fluid">
     <div class="span2">
       <!--Sidebar content-->
-      <p>Choose a Flash Card List Below</p>
+      <p id="languages">Languages</p>
       	<ul>
-<li><%= link_to "Ruby Keywords", rubykeys_path %></li>
-<li><%= link_to "Ruby Functions", rubyfuncts_path %></li>
-<li><%= link_to "Ruby Examples", '#' %></li>
-<li><%= link_to "Rails Keywords", '#' %></li>
-<li><%= link_to "RSpec Keywords", '#' %></li>
-<li><%= link_to "PHP Keywords", '#' %></li>
-<li><%= link_to "Obj-C Keywords", '#' %></li>
+<li><%= link_to "Ruby", rubyinfo_path %></li>
+<li><%= link_to "Rails", '#' %></li>
+<li><%= link_to "RSpec", '#' %></li>
+<li><%= link_to "Git", '#' %></li>
+<li><%= link_to "PHP", '#' %></li>
+<li><%= link_to "Obj-C", '#' %></li>
 <li><%= link_to "Tutorial", '#' %></li>
 </ul>
     </div>
@@ -24,13 +23,13 @@
 
     </div>
       <div class="span2">
-      	<p>References</p>
+      	<p id="refstitle">References</p>
   <ul>
-  	<li class="pull-left"><a href="http://www.ruby-doc.com">Ruby-doc<%= image_tag("ruby.png", alt: "Ruby Icon") %></a></li>
-  	<li class="pull-left"><a href="http://www.ruby-doc.com">Rails-doc<%= image_tag("rails.png", alt: "Ruby on Rails Icon") %></a></li>
-  	<li class="pull-left"><a href="http://php.net/docs.php">PHP<%= image_tag("php.png", alt: "Ruby on Rails Icon") %></a></li>
-  	<li class="pull-left"><a href="http://www.python.org/doc">Python<%= image_tag("python.png", alt: "Ruby on Rails Icon") %></a></li>
-  	<li class="pull-left"><a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html">Obj-C<%= image_tag("objc.png", alt: "Ruby on Rails Icon") %></a></li>
+  	<li id="refs" class="pull-left"><a href="http://www.ruby-doc.com">Ruby-doc<%= image_tag("ruby.png", alt: "Ruby Icon") %></a></li> 
+    <li  id="refs"  class="pull-left"><a href="http://www.ruby-doc.com">Rails-doc<%= image_tag("rails.png", alt: "Ruby on Rails Icon") %></a></li>
+  	<li  id="refs"  class="pull-left"><a href="http://php.net/docs.php">PHP<%= image_tag("php.png", alt: "Ruby on Rails Icon") %></a></li>
+  	<li  id="refs"  class="pull-left"><a href="http://www.python.org/doc">Python<%= image_tag("python.png", alt: "Ruby on Rails Icon") %></a></li>
+  	<li  id="refs"  class="pull-left"><a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html">Obj-C<%= image_tag("objc.png", alt: "Ruby on Rails Icon") %></a></li>
   </ul>
 
 
