@@ -4,11 +4,14 @@
  <link rel="stylesheet" href="css/mynav.css" type="text/css" />
  <script type="text/javascript" src="js/mynav.js"></script>
 <link rel="stylesheet" href="css/style.css" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+
 </head>
   <title>Flashy Programming</title>
 
 <body>
-	<header><div class="navbar-inner"><h3><%= link_to "Flashy Programming", home_path %><h3></header>
+	<header><h1 id="logo" class="pull-left"><%= link_to "Web Dev Flash", home_path %><h3>
 <nav class="nav nav-pills">
 	<ul class="btn-group">
 		<li class="btn"><i class="icon-home"></i><%=link_to " Home", home_path %></li>
@@ -46,3 +49,4 @@
       </ul>
     </ul>
 	</nav>
+</header>
