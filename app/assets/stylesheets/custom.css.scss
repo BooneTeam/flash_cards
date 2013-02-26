@@ -1,4 +1,8 @@
 @import "bootstrap";
+@font-face {
+	src: local('Lobster'),
+	url('/fonts/Lobster.ttf') format('truetype');
+}
 
 #logo{
 	font-family: 'Lobster', Georgia, Times, serif;
