@@ -188,4 +188,40 @@ Sets tracing for a global variable. The variable name is specified as a symbol. 
 Sets a signal handler. sig may be a string (like SIGUSR1) or an integer. SIG may be omitted from signal name. Signal handler for EXIT signal or signal number 0 is invoked just before process termination.", :cardtype => "rubyfuncts"},
 {:word => "untrace_var( var[, cmd])", :definition =>
 "Removes tracing for a global variable. If cmd is specified, only that command is removed.", :cardtype => "rubyfuncts"
-     }]) 
+     },
+     #git commands start here
+{:word => "git config [key] [value]", :definition => "set a config value in this repository", :cardtype => "gitcommand"},
+{:word => "git config --global [key] [value] ", :definition => "set a config value globally for this user", :cardtype => "gitcommand"},
+{:word => "git init", :definition => "initialize an existing directory as a Git 
+repository", :cardtype => "gitcommand"},
+{:word =>  "git clone [url]", :definition => "clone a Git repository from a URL", :cardtype => "gitcommand"},
+{:word => "git help [command]", :definition => 
+  "get help on any Git command", :cardtype => "gitcommand"},
+  #RailsRake Commands Start Here
+{:word => "rake db:fixtures:load", :definition => 
+  "Load fixtures into the current environment's database. Load specific fixtures using FIXTURES=x,y", :cardtype => "rake"},
+
+{:word => "rake db:migrate", :definition => 
+  "Migrate the database through scripts in db/migrate. Target specific version with VERSION=x", :cardtype => "rake"},
+
+{:word => "rake db:schema:dump", :definition => 
+  "Create a db/schema.rb file that can be portably used against any DB supported by AR.", :cardtype => "rake"},
+
+{:word => "rake db:schema:load", :definition =>
+  "Load a schema.rb file into the database.", :cardtype => "rake"},
+
+{:word => "rake db:sessions:clear", :definition => 
+  "Clear the sessions table.", :cardtype => "rake"},
+
+{:word => "rake db:sessions:create", :definition => 
+ "Creates a sessions table for use with CGI::Session::ActiveRecordStore.", :cardtype => "rake"},
+
+{:word => "rake db:structure:dump", :definition => 
+  "Dump the database structure to a SQL file.", :cardtype => "rake"},
+
+{:word => "rake db:test:clone", :definition => 
+  "Recreate the test database from the current environment's database schema.", :cardtype => "rake"},
+
+{:word => "rake db:test:clone_structure", :definition => 
+  "Recreate the test databases from the development structure.", :cardtype => "rake"}
+]);

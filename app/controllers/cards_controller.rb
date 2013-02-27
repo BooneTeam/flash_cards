@@ -22,25 +22,44 @@ class CardsController < ApplicationController
     end
 
     def wrong
-  end
+    end
 
 
   def start
     @random = []
     @random2 = []
-    Card.where({ :cardtype => ["rubykeys"] }).order("random()").limit(10).each { |k| @random << k.word and @random2 << k.definition}
+    Card.where({ :cardtype => ["rubykeys"] }).order("random()").limit(5).each { |k| @random << k.word and @random2 << k.definition}
     @sym = @random2[0]
     @answer = @random[0]
-    @sym2 = @random[0..10].sort_by {rand}
+    @sym2 = @random[0..5].sort_by {rand}
      end
 
 
   def ruby_functs
     @random = []
     @random2 = []
-    Card.where({ :cardtype => ["rubyfuncts"] }).order("random()").limit(10).each { |k| @random << k.word and @random2 << k.definition}
+    Card.where({ :cardtype => ["rubyfuncts"] }).order("random()").limit(5).each { |k| @random << k.word and @random2 << k.definition}
     @sym = @random2[0]
     @answer = @random[0]
-    @sym2 = @random[0..10].sort_by {rand}
-     end
+    @sym2 = @random[0..4].sort_by {rand}
+  end
+
+  def gitcommands
+    @random = []
+    @random2 = []
+    Card.where({ :cardtype => ["gitcommand"] }).order("random()").limit(5).each { |k| @random << k.word and @random2 << k.definition}
+    @sym = @random2[0]
+    @answer = @random[0]
+    @sym2 = @random[0..4].sort_by {rand}
+  end
+
+  def rakecommands
+     @random = []
+    @random2 = []
+    Card.where({ :cardtype => ["rake"] }).order("random()").limit(5).each { |k| @random << k.word and @random2 << k.definition}
+    @sym = @random2[0]
+    @answer = @random[0]
+    @sym2 = @random[0..4].sort_by {rand}
+  end
+
 end

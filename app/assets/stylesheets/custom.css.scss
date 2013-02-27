@@ -14,6 +14,7 @@
 }
 #refs {
 	line-height: 100px ;
+	margin-left:30px;
 }
 #languages {
 	font-size:25px;
@@ -62,15 +63,28 @@ p{
 	font-size:14px;
 	text-align:center;
 }
+.gitinfoboxes {
+	background-color:#3c9dd0;
+	box-shadow: 2px 4px 10px #888;
+
+}
 .rubykeysa {
 	background-color:#A60000;
 	border: black solid 0px;
 	border-radius: 15px;
+	box-shadow: 2px 4px 10px #888;
+	color:white;
 }
 .rubykeysb {
 	background-color: black;
-	color:gray;
+	color:white;
 	border-radius: 15px;
+	box-shadow: 2px 4px 10px #888;
+}
+.railsinfoboxes {
+	background-color:#A40004;
+	box-shadow: 2px 4px 10px #888;
+	color:white;
 }
 .padtop {
 	margin-top:20px;

@@ -7,12 +7,12 @@
       <p id="languages">Flashcards</p>
       	<ul>
 <li><%= link_to "Ruby", rubyinfo_path %></li>
-<li><%= link_to "Rails", '#' %></li>
-<li><%= link_to "RSpec", '#' %></li>
-<li><%= link_to "Git", '#' %></li>
-<li><%= link_to "PHP", '#' %></li>
-<li><%= link_to "Obj-C", '#' %></li>
-<li><%= link_to "Tutorial", '#' %></li>
+<li><%= link_to "Rails", railsinfo_path %></li>
+<li class="notready"><%= link_to "RSpec", '#' %></li>
+<li><%= link_to "Git", gitinfo_path %></li>
+<li class="notready"><%= link_to "jQuery", '#' %></li>
+<li class="notready"><%= link_to "Obj-C", '#' %></li>
+<li class="notready"><%= link_to "Tutorial", '#' %></li>
 </ul>
     </div>
     <div class="span8 hero-unit">
@@ -21,10 +21,10 @@
       <p>It would be pretty hard to learn Spanish without knowing what words meant what right? Well, it's the same with programming. If you don't know all your options than you'll never see how many great ways there are to build types of programs.</br></br><i>Click on an option to the left and get started. Increase your programming vocabulary while enhancing your skills!</i></p>
 
     </div>
-      <div class="span2">
-      	<p id="refstitle">References</p>
-  <ul>
-  	<li id="refs" class="pull-left"><a href="http://www.ruby-doc.com">Ruby-doc<%= image_tag("ruby.png", alt: "Ruby Icon") %></a></li> 
+      <div class="span offset2">
+      
+  <ul class="center">
+     <li id="refs" class="pull-left"><a href="http://www.ruby-doc.com">Ruby-doc<%= image_tag("ruby.png", alt: "Ruby Icon") %></a></li> 
     <li  id="refs"  class="pull-left"><a href="http://www.ruby-doc.com">Rails-doc<%= image_tag("rails.png", alt: "Ruby on Rails Icon") %></a></li>
   	<li  id="refs"  class="pull-left"><a href="http://php.net/docs.php">PHP<%= image_tag("php.png", alt: "Ruby on Rails Icon") %></a></li>
   	<li  id="refs"  class="pull-left"><a href="http://www.python.org/doc">Python<%= image_tag("python.png", alt: "Ruby on Rails Icon") %></a></li>

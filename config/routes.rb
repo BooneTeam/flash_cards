@@ -2,6 +2,9 @@ FlashCards::Application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :cards do
+    get :start
+  end
   
   # because of resources you don't need this anymore 
     #get "users/new"
@@ -24,6 +27,14 @@ FlashCards::Application.routes.draw do
   match '/rubyfuncts', to: "cards#ruby_functs"
 
   match '/rubyinfo', to: "static_pages#rubyinfo"
+
+  match '/gitinfo', to: "static_pages#gitinfo"
+
+  match '/gitcommands', to: "cards#gitcommands"
+
+  match '/rakecommands', to: "cards#rakecommands"
+
+  match '/railsinfo', to: "static_pages#railsinfo"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

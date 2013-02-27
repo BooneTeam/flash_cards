@@ -1,15 +1,14 @@
-	 
-	 <div class="row-fluid">
-	 <h4 class="span12 center">A RANDOM DEFINITION WILL BE DISPLAYED BELOW</br>CLICK ON THE CORRECT KEYWORD TO THE LEFT</h4></div>
+ <div class="row-fluid">
+	 <h4 class="span12 center">A RANDOM COMMAND FUNCTION WILL BE DISPLAYED BELOW</br>CLICK ON THE CORRECT COMMAND TO THE LEFT</h4></div>
 
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<div class="span2">
+			<div class="span3">
 	
 	 <ul class="btn-group btn-group-vertical">>
 	 <% for @random in @sym2 
 		 if @random == @answer
-			x = rubykeys_path %>
+			x = rakecommands_path %>
 			<li class="btn btn-small btn-info flash right"><%= link_to "#{@random}", x %></li>
 			<% else 
 				x = wrong_path %>
@@ -18,12 +17,9 @@
 	 <% end %>
 	  <% end %>
 	</ul>
-			</div>
-	
+</div>
 	<div class= "span8 cards"><p><%= "#{@sym}" %></p>
 	</div>
 	<p>* If you get the answer right the flashcard will reload. If not you will be directed to another page</p>
 		</div>
 	</div>
-
-	
