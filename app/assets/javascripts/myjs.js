@@ -10,12 +10,9 @@
  			event.preventDefault();
  			$(this).hide("slow");
  		});
- 		$("li.flash.right").click(function(event){
- 			event.preventDefault();
- 			$(".cards").ajax("/cards/start")
-
- 			 			
- 			
- 		});
+ 		//$("li.flash.right").click(function(event){
+ 			//event.preventDefault();
+ 			//$(".cards").ajax("/cards/start")
+		//});
  	});
  

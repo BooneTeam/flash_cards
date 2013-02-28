@@ -8,5 +8,10 @@ describe "Static pages" do
      visit '/home'
      page.should have_content('Flashy Programming')
     end
+    it "should have link to sign in"
+    visit '/home'
+    page.should have_link('sign in')
+end
+
   end
 end
