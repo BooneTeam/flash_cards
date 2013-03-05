@@ -15,28 +15,28 @@
 
 </ul>
     </div>
-
-		<div class= "span4 offset3 center cards"><p><%= "#{@sym}" %></p>
+<div class="span2 offset1 pull-right"><p>* If you get the answer right the flashcard will reload. If not you will be directed to another page</p>
+			</div>
+		<div class= "offset3 center cards"><p><%= "#{@sym}" %></p>
 		</div>
 		<div class="span2 offset3">
 
 
-<ul class="btn-group btn-group-vertical">
+<ul class="span">
 	 <% for @random in @sym2 
 		 if @random == @answer
 			x = yield(:cardset) %>
-			<li class="btn btn-small btn-info flash right"><%= link_to "#{@random}", x %></li>
+			<li class="flash right"><%= link_to "#{@random}", x %></li>
 			<% else 
 				x = wrong_path %>
 			
-				<li class="btn btn-small btn-info flash wrong"><%= link_to "#{@random}", x %></li>
+				<li class="flash wrong"><%= link_to "#{@random}", x %></li>
 	 <% end %>
 	  <% end %>
 	</ul>
+			
 			</div>
 
-			<div class="span2 offset1 pull-right"><p>* If you get the answer right the flashcard will reload. If not you will be directed to another page</p>
-			</div>
 		</div>
 	</div>
 	<div>
