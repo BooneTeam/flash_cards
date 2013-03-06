@@ -189,6 +189,30 @@ Sets a signal handler. sig may be a string (like SIGUSR1) or an integer. SIG may
 {:word => "untrace_var( var[, cmd])", :definition =>
 "Removes tracing for a global variable. If cmd is specified, only that command is removed.", :cardtype => "rubyfuncts"
      },
+
+     #Ruby Operators Start Here
+
+     {:word => " [ ] [ ]=", :definition => "  Element reference, element set", :cardtype => "operators"},
+{:word => "**", :definition => "  Exponentiation", :cardtype => "operators"},
+{:word => " ! ~ + - ", :definition => " Not, complement, unary plus and minus (method names for the last two are +@ and -@)", :cardtype => "operators"},
+{:word => " * / % ", :definition => " Multiply, divide, and modulo", :cardtype => "operators"},
+{:word => " + - ", :definition => " Plus and minus", :cardtype => "operators"},
+{:word => " >> << ", :definition => " Right and left shift", :cardtype => "operators"},
+{:word => " & ", :definition => " Bitwise `and'", :cardtype => "operators"},
+{:word => " ^ | ", :definition => " Bitwise exclusive `or' and regular `or'", :cardtype => "operators"},
+{:word => " <= < > >= ", :definition => " Comparison operators", :cardtype => "operators"},
+{:word => " <=> == === != =~ !~ ", :definition => " Equality and pattern match operators (!= and !~ may not be defined as methods)", :cardtype => "operators"},
+{:word => "&& ", :definition => " Logical `and'", :cardtype => "operators"},
+{:word => "|| ", :definition => " Logical `or'", :cardtype => "operators"},
+{:word => ".. ... ", :definition => " Range (inclusive and exclusive)", :cardtype => "operators"},
+{:word => "? : ", :definition => "  Ternary if-then-else", :cardtype => "operators"},
+{:word => "= %= { /= -= += |= &= >>= <<= *= &&= ||= **= ", :definition => " Assignment", :cardtype => "operators"},
+{:word => "defined?", :definition => "  Check if symbol defined", :cardtype => "operators"},
+{:word => "not", :definition => " Logical negation", :cardtype => "operators"},
+{:word => "or and", :definition => "  Logical composition", :cardtype => "operators"},
+{:word => "if unless while until", :definition => " Expression modifiers", :cardtype => "operators"},
+{:word => "begin/end", :definition => " Block expression", :cardtype => "operators"},
+    
      #git commands start here
 {:word => "git config [key] [value]", :definition => "set a config value in this repository", :cardtype => "gitcommand"},
 {:word => "git config --global [key] [value] ", :definition => "set a config value globally for this user", :cardtype => "gitcommand"},
@@ -197,6 +221,80 @@ repository", :cardtype => "gitcommand"},
 {:word =>  "git clone [url]", :definition => "clone a Git repository from a URL", :cardtype => "gitcommand"},
 {:word => "git help [command]", :definition => 
   "get help on any Git command", :cardtype => "gitcommand"},
+{:word => "git status show the status of what is staged for your next commit and 
+what is modified in your working directory", :cardtype => "gitcommand"},
+{:word => "git add [file]", :definition => " add a file as it looks now to your next commit (stage)", :cardtype => "gitcommand"},
+{:word => "git reset [file]", :definition => " reset the staging area for a file so the change is not in your 
+next commit (unstage)", :cardtype => "gitcommand"},
+{:word => "git diff", :definition => " diff of what is changed but not staged", :cardtype => "gitcommand"},
+{:word => "git diff --staged", :definition => " diff of what is staged but not yet committed", :cardtype => "gitcommand"},
+{:word => "git commit commit", :definition => " your staged content as a new commit snapshot", :cardtype => "gitcommand"},
+{:word => "git rm [file]", :definition => "remove a file from your working directory and unstage", :cardtype => "gitcommand"},
+{:word => "git gui tcl/tk", :definition => "GUI program to make all of these commands simpler", :cardtype => "gitcommand"},
+{:word => "git branch", :definition => "  list your branches. a * will appear next to the 
+currently active branch", :cardtype => "gitcommand"},
+{:word => "git branch [branch-name]", :definition => "  create a new branch at the current commit", :cardtype => "gitcommand"},
+{:word => "git checkout [branch]", :definition => "  switch to another branch and check it out into 
+your working directory", :cardtype => "gitcommand"},
+{:word => "git checkout -b [branch]", :definition => "  create a branch and immediately switch to it", :cardtype => "gitcommand"},
+{:word => "git merge [branch]", :definition => "  merge another branch into your currently active 
+one and record the merge as a commit", :cardtype => "gitcommand"},
+{:word => "git log", :definition => "  show commit logs", :cardtype => "gitcommand"},
+{:word => "git stash", :definition => "
+stash away the currently uncommitted 
+modifications in your working directory 
+temporarily", :cardtype => "gitcommand"},
+{:word => "git stash apply", :definition => "  re-apply the last stashed changes
+Share & Update
+Fetching, merging and working with updates from another repository.", :cardtype => "gitcommand"},
+{:word => "git remote add [alias] [url]", :definition => "  add a git URL as an alias", :cardtype => "gitcommand"},
+{:word => "git fetch [alias]", :definition => "  fetch down all the branches from that Git remote", :cardtype => "gitcommand"},
+{:word => "git merge [alias]/[branch]", :definition => "  merge a branch on the server into your currently 
+active branch to bring it up to date", :cardtype => "gitcommand"},
+{:word => "git push [alias] [branch]", :definition => "  push the work on your branch to update that 
+branch on the remote git repository", :cardtype => "gitcommand"},
+{:word => "git pull", :definition => "  fetch from the URL tracked by the current branch 
+and immediately try to merge in the tracked branch
+Inspect & Compare
+Examining logs, diffs and object information.", :cardtype => "gitcommand"},
+{:word => "git log", :definition => "  show the commit history for the currently active 
+branch", :cardtype => "gitcommand"},
+{:word => "git log branchB..branchA", :definition => "  show the commits on branchA that are not on 
+branchB", :cardtype => "gitcommand"},
+{:word => "git log --follow [file]", :definition => "  show the commits that changed file, even across 
+renames", :cardtype => "gitcommand"},
+{:word => "git diff branchB...branchA", :definition => "  show the diff of what is in branchA that is not in 
+branchB", :cardtype => "gitcommand"},
+{:word => "git show [SHA]", :definition => "  show any object in Git in human-readable format", :cardtype => "gitcommand"},
+{:word => "gitx tcl/tk", :definition => "  program to show the commit log in a GUI", :cardtype => "gitcommand"}, 
+{:word => "When you first setup Git, set up your user name and email address so your first 
+commits record them properly.", :definition => "git config --global user.name \"My Name\" 
+ git config --global user.email \"user@email.com\"", :cardtype => "gitcommand"}, 
+{:word => "Basic Git Workflow Example
+Initialize a new git repository, then stage all the files in the directory and finally 
+commit the initial snapshot.", :definition => "
+$ git init
+$ git add .
+$ git commit -m \'initial commit\'", :cardtype => "gitcommand"}, 
+{:word => "Create a new branch named featureA, then check it out so it is the active 
+branch. then edit and stage some files and finally commit the new snapshot.", :definition => "
+$ git branch featureA
+$ git checkout featureA
+$ (edit files)
+$ git add (files)
+$ git commit -m 'add feature A'", :cardtype => "gitcommand"}, 
+{:word => "Switch back to the master branch, reverting the featureA changes you just 
+made, then edit some files and commit your new changes directly in the master 
+branch context.", :definition => "
+$ git checkout master
+$ (edit files)
+$ git commit -a -m 'change files'", :cardtype => "gitcommand"}, 
+{:word => "Merge the featureA changes into the master branch context, combining all your 
+work. Finally delete the featureA branch.", :definition => "
+$ git merge featureA
+$ git branch -d featureA", :cardtype => "gitcommand"}, 
+
+
   #RailsRake Commands Start Here
 {:word => "rake db:fixtures:load", :definition => 
   "Load fixtures into the current environment's database. Load specific fixtures using FIXTURES=x,y", :cardtype => "rake"},
@@ -223,5 +321,38 @@ repository", :cardtype => "gitcommand"},
   "Recreate the test database from the current environment's database schema.", :cardtype => "rake"},
 
 {:word => "rake db:test:clone_structure", :definition => 
-  "Recreate the test databases from the development structure.", :cardtype => "rake"}
-]);
+  "Recreate the test databases from the development structure.", :cardtype => "rake"},
+
+{:word => "rake db:test:prepare", :definition => "Prepare the test database and load the schema", :cardtype => "rake" },
+{:word => "rake db:test:purge", :definition => "Empty the test database", :cardtype => "rake" },
+{:word => "rake doc:appBuild the app HTML Files", :cardtype => "rake" },
+{:word => "rake doc:clobber_app", :definition => "Remove rdoc products", :cardtype => "rake" },
+{:word => "rake doc:clobber_plugins", :definition => "Remove plugin documentation", :cardtype => "rake" },
+{:word => "rake doc:clobber_rails Remove rdoc products", :cardtype => "rake" },
+{:word => "rake doc:plugins", :definition => "Generate documation for all installed plugins", :cardtype => "rake" },
+{:word => "rake doc:rails", :definition => "Build the rails HTML Files", :cardtype => "rake" },
+{:word => "rake doc:reapp", :definition => "Force a rebuild of the RDOC files", :cardtype => "rake" },
+{:word => "rake doc:rerails", :definition => "Force a rebuild of the RDOC files", :cardtype => "rake" },
+{:word => "rake log:clear", :definition => "Truncates all *.log files in log/ to zero bytes", :cardtype => "rake" },
+{:word => "rake rails:freeze:edge", :definition => "Lock this application to latest Edge Rails. Lock a specific revision with REVISION=X", :cardtype => "rake" },
+{:word => "rake rails:freeze:gems", :definition => "Lock this application to the current gems (by unpacking them into vendor/rails)", :cardtype => "rake" },
+{:word => "rake rails:unfreeze", :definition => "Unlock this application from freeze of gems or edge and return to a fluid use of system gems", :cardtype => "rake" },
+{:word => "rake rails:update", :definition => "Update both scripts and public/javascripts from Rails", :cardtype => "rake" },
+{:word => "rake rails:update:javascripts", :definition => "Update your javascripts from your current rails install", :cardtype => "rake" },
+{:word => "rake rails:update:scripts", :definition => "Add new scripts to the application script/ directory", :cardtype => "rake" },
+{:word => "rake stats", :definition => "Report code statistics (KLOCs, etc) from the application", :cardtype => "rake" },
+{:word => "rake test", :definition => "Test all units and functionals", :cardtype => "rake" },
+{:word => "rake test:functionals", :definition => "Run tests for functionalsdb:test:prepare", :cardtype => "rake" },
+{:word => "rake test:integration", :definition => "Run tests for integrationdb:test:prepare", :cardtype => "rake" },
+{:word => "rake test:plugins", :definition => "Run tests for pluginsenvironment", :cardtype => "rake" },
+{:word => "rake test:recent", :definition => "Run tests for recentdb:test:prepare", :cardtype => "rake" },
+{:word => "rake test:uncommitted", :definition => "Run tests for uncommitteddb:test:prepare", :cardtype => "rake" },
+{:word => "rake test:units", :definition => "Run tests for unitsdb:test:prepare", :cardtype => "rake" },
+{:word => "rake tmp:cache:clear", :definition => "Clears all files and directories in tmp/cache", :cardtype => "rake" },
+{:word => "rake tmp:clear", :definition => "Clear session, cache, and socket files from tmp/", :cardtype => "rake" },
+{:word => "rake tmp:create", :definition => "Creates tmp directories for sessions, cache, and sockets", :cardtype => "rake" },
+{:word => "rake tmp:sessions:clear", :definition => "Clears all files in tmp/sessions", :cardtype => "rake" },
+{:word => "rake tmp:sockets:clear", :definition => "Clears all ruby_sess.* files in tmp/sessions", :cardtype => "rake" }
+])
+
+ 

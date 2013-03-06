@@ -26,6 +26,21 @@ class CardsController < ApplicationController
     def wrong
     end
 
+  def correct_count
+  @correct_count = -1
+  if start
+  @correct_count += 1 
+end
+  end
+
+  def wrong_count
+  
+  end
+
+  def avg
+    
+  end
+
 
   def start
     @random = []
@@ -34,7 +49,7 @@ class CardsController < ApplicationController
     @sym = @random2[0]
     @answer = @random[0]
     @sym2 = @random[0..5].sort_by {rand}
-     end
+  end
 
 
   def ruby_functs
@@ -63,5 +78,15 @@ class CardsController < ApplicationController
     @answer = @random[0]
     @sym2 = @random[0..4].sort_by {rand}
   end
+
+  def rubyops
+    @random = []
+    @random2 = []
+    Card.where({ :cardtype => ["operators"] }).order("random()").limit(5).each { |k| @random << k.word and @random2 << k.definition}
+    @sym = @random2[0]
+    @answer = @random[0]
+    @sym2 = @random[0..4].sort_by {rand}
+  end
+
 
 end

@@ -26,6 +26,8 @@ FlashCards::Application.routes.draw do
 
   match '/rubyfuncts', to: "cards#ruby_functs"
 
+  match '/rubyops', to: "cards#rubyops"
+
   match '/rubyinfo', to: "static_pages#rubyinfo"
 
   match '/gitinfo', to: "static_pages#gitinfo"
