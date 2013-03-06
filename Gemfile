@@ -13,6 +13,7 @@ end
 
 group :development do
 	gem 'annotate'
+	gem 'mail'
 end
 # Gems used only for assets and not required
 # in production environments by default.
