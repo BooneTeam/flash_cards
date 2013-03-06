@@ -40,8 +40,8 @@ FlashCards::Application.configure do
   :address              => "smtp.gmail.com",
   :port                 => 587,
   :domain               => 'gmail.com',
-  :user_name            => 'Booneteam@gmail.com',
-  :password             => 'Mouserat1',
+  :user_name            => 'user',
+  :password             => 'pass',
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
 
