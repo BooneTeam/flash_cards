@@ -12,15 +12,16 @@ class UsersController < ApplicationController
 
   def create 
   	@user = User.new(params[:user])
-     respond_to do |format|
+     #respond_to do |format|
   	if @user.save
   		sign_in @user
-  	#	redirect_to @user
-  #	else
-  #		render 'users/new'
-  	#end
+  		redirect_to @user
+  	else
+   	render 'users/new'
+  	end
+  end
    
-     # if @user.save
+=begin if @user.save
         UserMailer.welcome_email(@user).deliver
 
         format.html { redirect_to(@user, :notice => 'User was successfully created.') }
@@ -30,7 +31,7 @@ class UsersController < ApplicationController
         format.json { render :json => @user.errors, :status => :unprocessable_entity }
       end
     end
-  end
+=end
 
   def edit
   	# dont need when adding correct user filter @user = User.find(params[:id])
