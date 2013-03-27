@@ -28,6 +28,8 @@ FlashCards::Application.routes.draw do
 
   match '/rubyops', to: "cards#rubyops"
 
+  match '/rubyexamples', to: "cards#ruby_examples"
+
   match '/rubyinfo', to: "static_pages#rubyinfo"
 
   match '/gitinfo', to: "static_pages#gitinfo"
@@ -37,6 +39,7 @@ FlashCards::Application.routes.draw do
   match '/rakecommands', to: "cards#rakecommands"
 
   match '/railsinfo', to: "static_pages#railsinfo"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

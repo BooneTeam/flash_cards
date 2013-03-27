@@ -4,6 +4,29 @@
 	url('/fonts/Lobster.ttf') format('truetype');
 }
 
+.code{ 
+font-family: Arial;
+color: yellow;
+list-style-type: none;
+background-color: black;
+padding:10px;
+li{
+margin:15px;
+}
+}
+.keyword{
+	color: green;
+	}
+.object{
+	color: orange;
+}	
+.output{
+
+	color: pink;
+}
+.input{
+	color:red;
+}
 #logo{
 	font-family: 'Lobster', Georgia, Times, serif;
 	margin-left:10px;

@@ -352,7 +352,25 @@ $ git branch -d featureA", :cardtype => "gitcommand"},
 {:word => "rake tmp:clear", :definition => "Clear session, cache, and socket files from tmp/", :cardtype => "rake" },
 {:word => "rake tmp:create", :definition => "Creates tmp directories for sessions, cache, and sockets", :cardtype => "rake" },
 {:word => "rake tmp:sessions:clear", :definition => "Clears all files in tmp/sessions", :cardtype => "rake" },
-{:word => "rake tmp:sockets:clear", :definition => "Clears all ruby_sess.* files in tmp/sessions", :cardtype => "rake" }
+{:word => "rake tmp:sockets:clear", :definition => "Clears all ruby_sess.* files in tmp/sessions", :cardtype => "rake" },
+
+
+#seeds for ruby examples. #the word is actually the answer now. :v's are used for variables entered on method or object
+
+{:word => "{'a'=>100, 'b'=>200}", :definition => "Hash['a', 100, 'b', 200]", :cardtype => "rubyexample" },
+{:word => "#=> 'Go Fish'", :definition => "h = Hash.new('Go Fish')", :v1 => "h['a'] = 100",:v2 => 
+  "h['b'] = 200", :v3 => "what is['c']?", :cardtype => "rubyexample" },
+{:word => "# => nil", :definition => "Hash.try_convert("'1=>2'")", :cardtype => "rubyexample" },   
+  {:word => "# => {1=>2}", :definition => "Hash.try_convert({1=>2})", :cardtype => "rubyexample" },
+  {:word => "#=> true", :definition => "h1 = { "'a'" => 1, "'c'" => 2 }", 
+  :v1 => "h3 = { "'a'" => 1, "'c'" => 2, 7 => 35 }", :v2 => "h2 == h3", :cardtype => "rubyexample" },
+  {:word => "h["'a'"]   #=> 100", :definition => "h = { "'a'" => 100, "'b'" => 200 }", :cardtype => "rubyexample" },
+  {:word => "#=> {"'a'"=>9, "'b'"=>200}", :definition => "h = { "'a'" => 100, "'b'" => 200 }", 
+  :v1 => "h["'a'"] = 9", :v2 => "h", :cardtype => "rubyexample" },
+  {:word => "#=> ["'letters'", ["'a'", "'b'", "'c'"]]", :definition => "h = {"'colors'"  => ["'red'", "'blue'", "'green'"],
+     "'letters'" => ["'a'", "'b'", "'c'" ]}", :v2 => "h.assoc("'letters'")", :cardtype => "rubyexample" },
+  {:word => "#=> {}", :definition => "h = { "'a'" => 100, "'b'" => 200 }", :v2 => "h.clear", :cardtype => "rubyexample" },
+
 ])
 
  
