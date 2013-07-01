@@ -1,1 +1,1 @@
-This is a Flash Card App I am building to Study Keywords and concepts in different computer languages.
+This application was built prior to Dev Bootcamp and is unfinished. It is a Flash Card type app to Study Keywords and concepts in different computer languages.
