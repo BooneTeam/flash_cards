@@ -1,6 +1,4 @@
 class CardsController < ApplicationController
-
-    
  
     def index 
       @cards = Card.all
@@ -27,10 +25,10 @@ class CardsController < ApplicationController
     end
 
   def correct_count
-  @correct_count = -1
-  if start
-  @correct_count += 1 
-end
+    @correct_count = -1
+      if start
+      @correct_count += 1 
+  end
   end
 
   def wrong_count
@@ -41,51 +39,52 @@ end
     
   end
 
+  def randomizing(cardtype)
+      @random = []
+      @random2 = []
+      Card.where({ :cardtype => [cardtype] }).order("random()").limit(5).each { |k| @random << k.word and @random2 << k.definition}
+      @random
+      @random2
+  end 
 
-  def start
-    @random = []
-    @random2 = []
-    Card.where({ :cardtype => ["rubykeys"] }).order("random()").limit(5).each { |k| @random << k.word and @random2 << k.definition}
+  def correctanswer
     @sym = @random2[0]
     @answer = @random[0]
+  end
+
+  def wronganswers
     @sym2 = @random[0..5].sort_by {rand}
+  end
+
+  def start
+    randomizing("rubykeys")
+    correctanswer
+    wronganswers
   end
 
 
   def ruby_functs
-    @random = []
-    @random2 = []
-    Card.where({ :cardtype => ["rubyfuncts"] }).order("random()").limit(5).each { |k| @random << k.word and @random2 << k.definition}
-    @sym = @random2[0]
-    @answer = @random[0]
-    @sym2 = @random[0..4].sort_by {rand}
+    randomizing("rubyfuncts")
+    correctanswer
+    wronganswers
   end
 
   def gitcommands
-    @random = []
-    @random2 = []
-    Card.where({ :cardtype => ["gitcommand"] }).order("random()").limit(5).each { |k| @random << k.word and @random2 << k.definition}
-    @sym = @random2[0]
-    @answer = @random[0]
-    @sym2 = @random[0..4].sort_by {rand}
+    randomizing("gitcommand")
+    correctanswer
+    wronganswers
   end
 
   def rakecommands
-     @random = []
-    @random2 = []
-    Card.where({ :cardtype => ["rake"] }).order("random()").limit(5).each { |k| @random << k.word and @random2 << k.definition}
-    @sym = @random2[0]
-    @answer = @random[0]
-    @sym2 = @random[0..4].sort_by {rand}
+     randomizing("rake")
+     correctanswer
+     wronganswers
   end
 
   def rubyops
-    @random = []
-    @random2 = []
-    Card.where({ :cardtype => ["operators"] }).order("random()").limit(5).each { |k| @random << k.word and @random2 << k.definition}
-    @sym = @random2[0]
-    @answer = @random[0]
-    @sym2 = @random[0..4].sort_by {rand}
+    randomizing("operators")
+    correctanswer
+    wronganswers
   end
 
   def ruby_examples
@@ -116,3 +115,5 @@ end
 
 
 end
+
+
